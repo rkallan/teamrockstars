@@ -13,10 +13,6 @@
 html {
     position: relative;
     display: flex;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
     overflow-y: scroll;
     max-width: 100%;
     width: 100vw;
@@ -45,7 +41,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    .root {
+    .application {
         display: flex;
         flex-direction: column;
         flex: 1;
@@ -78,6 +74,9 @@ dialog:not([open]) {
 *[hidden],
 [hidden],
 [state="hidden"] {
+    max-height: 0;
+    min-height: 0;
+    opacity: 0;
     visibility: hidden;
 }
 
