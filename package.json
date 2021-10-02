@@ -2,6 +2,26 @@
     "name": "teamrockstars",
     "version": "0.1.0",
     "private": true,
+    "scripts": {
+        "build": "react-scripts build",
+        "commit": "git-cz",
+        "format": "npx prettier . --write",
+        "format:check": "npx prettier .",
+        "lint": "eslint . --fix",
+        "lint:check": "eslint .",
+        "prepare": "husky install",
+        "sort:package": "npx sort-package-json",
+        "start": "react-scripts start",
+        "test": "react-scripts test"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
     "dependencies": {
         "@loadable/component": "^5.15.0",
         "@reduxjs/toolkit": "^1.6.1",
@@ -32,20 +52,6 @@
         "workbox-strategies": "^6.3.0",
         "workbox-streams": "^6.3.0"
     },
-    "scripts": {
-        "commit": "git-cz",
-        "start": "react-scripts start",
-        "build": "react-scripts build",
-        "test": "react-scripts test",
-        "eject": "react-scripts eject",
-        "lint": "eslint .",
-        "lint:staged": "npm run format",
-        "format": "prettier --write \"./**/*.{jsx,js,json,css,scss,md,svg}\" \"!node_modules/**\"",
-        "prepare": "husky install"
-    },
-    "eslintConfig": {
-        "extends": "react-app"
-    },
     "devDependencies": {
         "@prettier/plugin-xml": "^1.1.0",
         "cz-conventional-changelog": "^3.3.0",
@@ -60,10 +66,5 @@
         "node-sass": "^6.0.1",
         "prettier": "^2.4.1",
         "rkallan-prettier-config": "^2.1.0"
-    },
-    "config": {
-        "commitizen": {
-            "path": "./node_modules/cz-conventional-changelog"
-        }
     }
 }
