@@ -13,12 +13,4 @@ const isExternalSourceLoggedIn =
         auth[category] && !!auth[category].login;
 const hasAuthenticationError = ({ auth }) => !!auth?.error?.length || false;
 
-export {
-    getAuth,
-    getTokens,
-    isLoggedIn,
-    getJwt,
-    getPublicJwt,
-    isExternalSourceLoggedIn,
-    hasAuthenticationError,
-};
+export { getAuth, getTokens, isLoggedIn, getJwt, getPublicJwt, isExternalSourceLoggedIn, hasAuthenticationError };

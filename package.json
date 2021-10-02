@@ -40,7 +40,8 @@
         "eject": "react-scripts eject",
         "lint": "eslint .",
         "lint:staged": "npm run format",
-        "format": "prettier --write \"./**/*.{jsx,js,json,css,scss,md,svg}\" \"!node_modules/**\""
+        "format": "prettier --write \"./**/*.{jsx,js,json,css,scss,md,svg}\" \"!node_modules/**\"",
+        "prepare": "husky install"
     },
     "eslintConfig": {
         "extends": "react-app"

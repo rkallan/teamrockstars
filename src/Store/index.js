@@ -8,8 +8,7 @@ const reducer = combineReducers({
 });
 
 const rootReducer = (state, action) => {
-    if (action.type === "authentication/resetAuth")
-        return reducer(undefined, action);
+    if (action.type === "authentication/resetAuth") return reducer(undefined, action);
 
     return reducer(state, action);
 };

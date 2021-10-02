@@ -13,30 +13,16 @@ const SubRoutes = ({ routes }) => {
                 {routes.map((route) => {
                     const { id, path, exact, authenticated, redirect } = route;
 
-                    if (redirect)
-                        return (
-                            <Redirect
-                                key={id}
-                                exact={exact}
-                                from={path}
-                                to={redirect}
-                            />
-                        );
+                    if (redirect) return <Redirect key={id} exact={exact} from={path} to={redirect} />;
 
-                    if (authenticated)
-                        return <PrivateRoute key={id} {...route} />;
+                    if (authenticated) return <PrivateRoute key={id} {...route} />;
 
                     return (
                         <Route
                             key={id}
                             path={path}
                             exact={exact}
-                            render={(routeProps) => (
-                                <route.component
-                                    {...routeProps}
-                                    routes={route.routes}
-                                />
-                            )}
+                            render={(routeProps) => <route.component {...routeProps} routes={route.routes} />}
                         />
                     );
                 })}

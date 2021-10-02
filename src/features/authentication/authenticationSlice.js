@@ -43,14 +43,7 @@ const authentication = createSlice({
     },
 });
 
-const { setAuthJwt, setAuthError, resetAuth, externalAuth } =
-    authentication.actions;
+const { setAuthJwt, setAuthError, resetAuth, externalAuth } = authentication.actions;
 const authenticationReducer = authentication.reducer;
 
-export {
-    authenticationReducer,
-    setAuthJwt,
-    setAuthError,
-    resetAuth,
-    externalAuth,
-};
+export { authenticationReducer, setAuthJwt, setAuthError, resetAuth, externalAuth };

@@ -35,39 +35,18 @@ const Routes = () => {
             <animated.div style={style} className={styles.main} variant="unit">
                 <Switch location={item}>
                     {appRoutes.map((route) => {
-                        const {
-                            id,
-                            path,
-                            exact,
-                            routes,
-                            authenticated,
-                            redirect,
-                        } = route;
+                        const { id, path, exact, routes, authenticated, redirect } = route;
 
-                        if (redirect)
-                            return (
-                                <Redirect
-                                    key={id}
-                                    exact={exact}
-                                    from={path}
-                                    to={redirect}
-                                />
-                            );
+                        if (redirect) return <Redirect key={id} exact={exact} from={path} to={redirect} />;
 
-                        if (authenticated)
-                            return <PrivateRoute key={id} {...route} />;
+                        if (authenticated) return <PrivateRoute key={id} {...route} />;
 
                         return (
                             <Route
                                 key={id}
                                 path={path}
                                 exact={exact}
-                                render={(routeProps) => (
-                                    <route.component
-                                        {...routeProps}
-                                        routes={routes}
-                                    />
-                                )}
+                                render={(routeProps) => <route.component {...routeProps} routes={routes} />}
                             />
                         );
                     })}

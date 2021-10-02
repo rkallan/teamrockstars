@@ -3,12 +3,9 @@ import PropTypes from "prop-types";
 import loadable from "@loadable/component";
 import styles from "./resources/styles/error.module.scss";
 
-const SubRoutes = loadable(
-    () => import(/* webpackChunkName: "SubRoutes" */ "Routes/SubRoutes"),
-    {
-        fallback: <div>Loading</div>,
-    }
-);
+const SubRoutes = loadable(() => import(/* webpackChunkName: "SubRoutes" */ "Routes/SubRoutes"), {
+    fallback: <div>Loading</div>,
+});
 
 const Error = ({ routes }) => {
     return (

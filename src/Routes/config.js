@@ -1,24 +1,14 @@
 import loadable from "@loadable/component";
 
-const Homepage = loadable(() =>
-    import(/* webpackChunkName: "Homepage" */ "pages/Homepage")
-);
+const Homepage = loadable(() => import(/* webpackChunkName: "Homepage" */ "pages/Homepage"));
 
-const Example = loadable(() =>
-    import(/* webpackChunkName: "Example" */ "pages/Example")
-);
+const Example = loadable(() => import(/* webpackChunkName: "Example" */ "pages/Example"));
 
-const Error = loadable(() =>
-    import(/* webpackChunkName: "Error" */ "pages/Error")
-);
+const Error = loadable(() => import(/* webpackChunkName: "Error" */ "pages/Error"));
 
-const Error403 = loadable(() =>
-    import(/* webpackChunkName: "Error403" */ "pages/Error/Error403")
-);
+const Error403 = loadable(() => import(/* webpackChunkName: "Error403" */ "pages/Error/Error403"));
 
-const Error404 = loadable(() =>
-    import(/* webpackChunkName: "Error404" */ "pages/Error/Error404")
-);
+const Error404 = loadable(() => import(/* webpackChunkName: "Error404" */ "pages/Error/Error404"));
 
 const appRoutes = [
     {

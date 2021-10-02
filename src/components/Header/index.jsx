@@ -5,8 +5,7 @@ const Header = () => {
     const onClickEventHandler = (event) => {
         const { currentTarget } = event || {};
         currentTarget?.blur();
-        if (currentTarget?.classList.contains("is-active"))
-            event.preventDefault();
+        if (currentTarget?.classList.contains("is-active")) event.preventDefault();
     };
 
     return (
@@ -14,22 +13,12 @@ const Header = () => {
             <nav>
                 <ul>
                     <li>
-                        <NavLink
-                            activeClassName="is-active"
-                            onClick={onClickEventHandler}
-                            exact
-                            to="/"
-                        >
+                        <NavLink activeClassName="is-active" onClick={onClickEventHandler} exact to="/">
                             Homepage
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink
-                            activeClassName="is-active"
-                            onClick={onClickEventHandler}
-                            exact
-                            to="/example"
-                        >
+                        <NavLink activeClassName="is-active" onClick={onClickEventHandler} exact to="/example">
                             Example
                         </NavLink>
                     </li>

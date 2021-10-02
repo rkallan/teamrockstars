@@ -3,12 +3,9 @@ import { BrowserRouter as Router } from "react-router-dom";
 import loadable from "@loadable/component";
 import AuthProvider from "features/authentication/AuthProvider";
 
-const Template = loadable(
-    () => import(/* webpackChunkName: "Template" */ "Template"),
-    {
-        fallback: <div>Loading</div>,
-    }
-);
+const Template = loadable(() => import(/* webpackChunkName: "Template" */ "Template"), {
+    fallback: <div>Loading</div>,
+});
 
 const App = () => {
     return (
